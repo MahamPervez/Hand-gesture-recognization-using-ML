@@ -5,12 +5,12 @@ DATA_DIR = './data'
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
-number_of_classes = 3
+number_of_classes = 29
 dataset_size = 100
 
 # Find an available camera index
 camera_index = None
-for i in range(4):  # Try indices from 0 to 3q
+for i in range(number_of_classes):  # Try indices from 0 to 3q
     cap = cv2.VideoCapture(i)
     if cap.isOpened():
         camera_index = i
